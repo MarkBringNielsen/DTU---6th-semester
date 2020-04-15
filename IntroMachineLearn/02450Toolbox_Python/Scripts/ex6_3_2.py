@@ -12,7 +12,7 @@ from ex1_5_1 import *
 # Maximum number of neighbors
 L=40
 
-CV = model_selection.LeaveOneOut()
+CV = model_selection.KFold(n_splits=N)
 errors = np.zeros((N,L))
 i=0
 for train_index, test_index in CV.split(X, y):

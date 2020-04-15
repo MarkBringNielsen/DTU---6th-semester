@@ -8,7 +8,7 @@ from sklearn.metrics import confusion_matrix
 from numpy import cov
 
 # Load Matlab data file and extract variables of interest
-mat_data = loadmat('../Data/synth1.mat') # <-- change the number to change dataset
+mat_data = loadmat('../Data/synth2.mat') # <-- change the number to change dataset
 X = mat_data['X']
 X_train = mat_data['X_train']
 X_test = mat_data['X_test']
@@ -30,11 +30,11 @@ for c in range(C):
 
 
 # K-nearest neighbors
-K=5
+K=1
 
 # Distance metric (corresponds to 2nd norm, euclidean distance).
 # You can set dist=1 to obtain manhattan distance (cityblock distance).
-dist=2
+dist=1
 metric = 'minkowski'
 metric_params = {} # no parameters needed for minkowski
 
